@@ -23,7 +23,7 @@ This is a simple and efficient blog server built using **FastAPI**. The primary 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/blog-server.git
+   git clone git@github.com:naga251602/blogserver.git
    cd blog-server
    ```
 
