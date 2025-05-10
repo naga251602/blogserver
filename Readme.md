@@ -24,7 +24,7 @@ This is a simple and efficient blog server built using **FastAPI**. The primary 
 
    ```bash
    git clone git@github.com:naga251602/blogserver.git
-   cd blog-server
+   cd blogserver
    ```
 
 2. Install the required dependencies:
