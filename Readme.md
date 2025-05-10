@@ -80,4 +80,3 @@ python -m unittest discover tests -p "test_2_*.py"
 ## Contributing
 
 Feel free to fork the project, submit issues, or create pull requests. Contributions are welcome to make this project even better!
-# blogserver
