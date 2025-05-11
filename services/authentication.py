@@ -8,7 +8,7 @@ from fastapi.security import (
 )
 from fastapi import APIRouter, Depends, HTTPException, status
 from models.reqResModels import LoginInModel, Token, SignUpModel
-from db.dbconnector import session
+from db.dbconnector import connect_to_db
 from db.queryDB import check_login_details, get_user, create_user
 from .jwttoken import create_token
 from config.envConfig import TOKEN_EXP_MINUTES, ALGORITHM, JWT_SECRET
@@ -20,6 +20,7 @@ auth_router = APIRouter()
 
 # defining the scheme
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+session = connect_to_db()
 
 
 # gets current user from database if token is valid
@@ -64,7 +65,7 @@ async def login(data: LoginInModel = Depends(OAuth2PasswordRequestForm)):
 
 # register route
 @auth_router.post("/users/register")
-async def register(data: SignUpModel = Depends(OAuth2PasswordRequestForm)):
+async def register(data: SignUpModel):
     res = create_user(data.dict(), session)
     if res["status"] == "failed":
         raise HTTPException(

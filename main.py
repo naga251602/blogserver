@@ -4,7 +4,6 @@ This is the main file consists of main server-code
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
-from models.reqResModels import LoginInModel
 from routes.userRoutes import user_router
 from routes.postRoutes import post_router
 from services.authentication import auth_router
@@ -16,6 +15,7 @@ from utils.htmlWelcome import htmlContent
 app = FastAPI()
 
 
+# a home route using a html content
 @app.get("/")
 def home():
     """

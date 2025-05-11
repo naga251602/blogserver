@@ -115,11 +115,14 @@ def update_user(data: dict, session: Session) -> dict:
 # delete user account from DB
 def delete_user(user_id: str, session: Session):
     user = session.query(Users).filter(Users.user_id == user_id).first()
+    posts = session.query(Posts).filter(Posts.user_id == user_id).all()
 
     if not user:
         return {"message": "Invalid User", "status": "failed"}
     else:
+        # deleting the user and posts they have created
         session.delete(user)
+        session.delete(posts)
         session.commit()
         return {"message": "User deleted!!!", "status": "success"}
 
