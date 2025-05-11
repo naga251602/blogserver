@@ -5,7 +5,6 @@ This file consists models(structures) handling
 """
 
 from pydantic import BaseModel
-from datetime import date
 
 
 # login requests type
