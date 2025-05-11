@@ -24,4 +24,4 @@ def connect_to_db() -> Session:
         return session
 
     except Exception as err:
-        print(err)
+        print(f"[*] Exception in DB: {err}")

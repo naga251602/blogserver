@@ -31,4 +31,4 @@ app.include_router(auth_router)  # adds the authentication endpoints
 app.include_router(post_router)  # adds the posts endpoints post
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='0.0.0.0', port=PORT)
+    uvicorn.run(app, host='0.0.0.0', port=int(PORT))
