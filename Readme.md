@@ -4,6 +4,7 @@
 
 This is a simple and efficient blog server built using **FastAPI**. The primary goal of this project is to implement a backend system using skills gained from self-learning. This backend application features both **user routes** and **post routes**, utilizing **MySQL** as the database with **SQLAlchemy** as the ORM for database interactions. The server handles all **CRUD operations** for users and posts, demonstrating modularity and proper project organization. Additionally, it features **JWT authentication** and **OAuth2** for secure user login and authorization.
 
+site is live 👉: https://blogserver-0oi3.onrender.com/
 ---
 
 ## Features

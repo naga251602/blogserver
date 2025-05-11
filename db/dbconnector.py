@@ -13,8 +13,7 @@ def connect_to_db() -> Session:
     try:
         # creating connection
         engine = create_engine(DB_URI)
-        print(DB_URI)
-
+        
         # create all tables in the database if not exists
         Base.metadata.create_all(engine)
 
